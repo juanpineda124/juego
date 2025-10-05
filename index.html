@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="1.jpg" />
+  <title>Insect World Explorers</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Start Screen -->
+  <div id="start-screen">
+    <h1>🐞 Insect World Explorers 🦋</h1>
+    <p>Welcome! In this game, you'll face 3 levels:</p>
+    <ul style="text-align: left; max-width: 500px; margin: 0 auto;">
+      <li><strong>Level 1:</strong> Identify insects by emoji.</li>
+      <li><strong>Level 2:</strong> Match each insect with its ecological role.</li>
+      <li><strong>Level 3:</strong> Choose the best defense for each insect.</li>
+    </ul>
+    <p>Enter your name to begin:</p>
+    <input type="text" id="player-name" placeholder="Your name">
+    <br><br>
+    <button onclick="startGame()">Start Game</button>
+  </div>
+
+  <!-- Game Container -->
+  <div id="game-container" style="display: none;">
+    <div id="question"></div>
+    <div id="options"></div>
+    <button id="next-btn" onclick="nextQuestion()" style="display: none;">Next</button>
+    <div id="result"></div>
+  </div>
+
+  <!-- Link to JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
