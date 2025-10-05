@@ -83,7 +83,7 @@ function showFinalScore() {
   document.getElementById("game-container").innerHTML = `
     <div id="certificate" style="
       width: 7.5in;
-      max-width: 7.5in;
+      max-width: 10.5in;
       margin: auto;
       padding: 0.7in 0.5in;
       background: white;
@@ -135,7 +135,7 @@ function downloadCertificate() {
   buttons.style.display = "none";
 
   const opt = {
-    margin: [0.3, 0.4, 0.3, 0.4], // top, left, bottom, right
+    margin: [0.25, 0.25, 0.25, 0.25], // top, left, bottom, right
     filename: `certificate-${playerName}.pdf`,
     image: { type: 'jpeg', quality: 1 },
     html2canvas: { scale: 2, useCORS: true },
