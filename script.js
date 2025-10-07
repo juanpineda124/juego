@@ -92,6 +92,18 @@ function nextQuestion() {
 }
 
 function showFinalScore() {
+  // Determinar el título según el puntaje
+  let title = "";
+  if (score >= 16) {
+    title = "🌟 Insect Master Explorer";
+  } else if (score >= 11) {
+    title = "🐞 Advanced Insect Explorer";
+  } else if (score >= 6) {
+    title = "🐜 Junior Insect Explorer";
+  } else {
+    title = "🐛 Insect Learner – Keep Exploring!";
+  }
+
   document.getElementById("game-container").innerHTML = `
     <div id="certificate" style="
       width: 7.5in;
@@ -110,6 +122,7 @@ function showFinalScore() {
       <h1 style="font-size: 24px; margin: 10px 0;">${playerName}</h1>
       <p style="font-size: 16px;">has successfully completed the game</p>
       <h3 style="font-size: 20px;">🐞 Insect World Explorers 🦋</h3>
+      <h2 style="color: #4CAF50; margin: 20px 0;">${title}</h2>
       <p style="font-size: 16px;">With a score of <strong>${score} out of 18</strong></p>
       <p style="margin-top: 20px; font-size: 14px;">🗓️ Date: ${new Date().toLocaleDateString()}</p>
 
@@ -121,6 +134,7 @@ function showFinalScore() {
     </div>
   `;
 }
+
 
 
 
