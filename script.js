@@ -6,15 +6,27 @@ let playerName = "";
 const questions = {
   1: [
     { question: "Which insect is this? 🐝", options: ["Bee", "Mosquito", "Ant"], answer: "Bee" },
-    { question: "Which insect is this? 🦋", options: ["Butterfly", "Spider", "Beetle"], answer: "Butterfly" }
+    { question: "Which insect is this? 🦋", options: ["Butterfly", "Spider", "Beetle"], answer: "Butterfly" },
+    { question: "Which insect is this? 🐞", options: ["Ladybug", "Wasp", "Fly"], answer: "Ladybug" },
+    { question: "Which insect is this? 🐜", options: ["Ant", "Beetle", "Moth"], answer: "Ant" },
+    { question: "Which insect is this? 🪰", options: ["Fly", "Bee", "Moth"], answer: "Fly" },
+    { question: "Which insect is this? 🦂", options: ["Scorpion", "Spider", "Wasp"], answer: "Scorpion" }
   ],
   2: [
-    { question: "What is the function of the bee?", options: ["Predator", "Pollinator", "Decomposer"], answer: "Pollinator" },
-    { question: "What is the function of the ant?", options: ["Decomposer", "Hunter", "Pollinator"], answer: "Decomposer" }
+    { question: "What is the role of the bee in nature?", options: ["Predator", "Pollinator", "Decomposer"], answer: "Pollinator" },
+    { question: "What is the main function of the ant?", options: ["Hunter", "Decomposer", "Pollinator"], answer: "Decomposer" },
+    { question: "What does a ladybug eat?", options: ["Leaves", "Other insects", "Pollen"], answer: "Other insects" },
+    { question: "What is the role of the butterfly?", options: ["Scavenger", "Pollinator", "Hunter"], answer: "Pollinator" },
+    { question: "How does a fly help ecosystems?", options: ["Decomposing matter", "Pollinating flowers", "Eating plants"], answer: "Decomposing matter" },
+    { question: "What does the mantis do in the food chain?", options: ["Decomposer", "Predator", "Pollinator"], answer: "Predator" }
   ],
   3: [
-    { question: "How does the butterfly defend itself?", options: ["Stings the enemy", "Camouflages or looks bigger", "Makes loud noise"], answer: "Camouflages or looks bigger" },
-    { question: "How does the ladybug defend itself?", options: ["Releases a liquid", "Flies very fast", "Stings"], answer: "Releases a liquid" }
+    { question: "How does the butterfly defend itself?", options: ["Stings", "Camouflages or looks bigger", "Makes loud noises"], answer: "Camouflages or looks bigger" },
+    { question: "How does the ladybug defend itself?", options: ["Releases a liquid", "Flies fast", "Stings"], answer: "Releases a liquid" },
+    { question: "How does the wasp protect itself?", options: ["Hides underground", "Stings", "Plays dead"], answer: "Stings" },
+    { question: "How does the beetle defend itself?", options: ["Jumps", "Pretends to be dead", "Has a hard shell"], answer: "Has a hard shell" },
+    { question: "How does the stick insect avoid predators?", options: ["Makes noise", "Camouflages as a branch", "Bites"], answer: "Camouflages as a branch" },
+    { question: "How does the cockroach escape danger?", options: ["Freezes", "Runs quickly", "Flies away"], answer: "Runs quickly" }
   ]
 };
 
@@ -98,10 +110,9 @@ function showFinalScore() {
       <h1 style="font-size: 24px; margin: 10px 0;">${playerName}</h1>
       <p style="font-size: 16px;">has successfully completed the game</p>
       <h3 style="font-size: 20px;">🐞 Insect World Explorers 🦋</h3>
-      <p style="font-size: 16px;">With a score of <strong>${score} out of 6</strong></p>
+      <p style="font-size: 16px;">With a score of <strong>${score} out of 18</strong></p>
       <p style="margin-top: 20px; font-size: 14px;">🗓️ Date: ${new Date().toLocaleDateString()}</p>
 
-      <!-- Botones visibles solo en pantalla -->
       <div id="certificate-buttons">
         <button onclick="downloadCertificate()" style="margin-top: 30px;">📄 Download Certificate (PDF)</button>
         <br><br>
